@@ -4,7 +4,9 @@
  * @param {string} string
  * @returns {string}
  */
-export const replaceZAndVFromString = (string) => {};
+export const replaceZAndVFromString = (string) => {
+    return
+};
 
 /**
  * Функция должна принять 3 аргумента и все строки. Мы передаем строку,
