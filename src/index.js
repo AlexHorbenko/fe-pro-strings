@@ -27,7 +27,9 @@ export const changeWord = (string, word, newWord) => {
  * @param {number} length
  * @returns {string}
  */
-export const truncate = (string, length) => {};
+export const truncate = (string, length) => {
+    return string.slice(0, 3)
+};
 
 /**
  * Принимает строку в первом аргументе, и символ во втором
