@@ -18,8 +18,9 @@ export const replaceZAndVFromString = (string) => {
  * @param {string} newWord
  * @returns {string}
  */
-export const changeWord = (string, word, newWord) => {};
-
+export const changeWord = (string, word, newWord) => {
+    return string.replace(word, newWord)
+};
 /**
  * Должна вернуть строку(1 аргумент) на обрезанную по длине(2 аргумент, число)
  * @param {string} string
