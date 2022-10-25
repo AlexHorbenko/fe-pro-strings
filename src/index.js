@@ -43,13 +43,10 @@ export const truncate = (string, length) => {
  * @returns {number}
  */
 export const quantityOfSymbols = (string, symbol) => {
-    // let string = 'This is a task of quantity of Symbols'
-    // let symbol = 's'
-    
     return count (string, symbol) {
         for (let count = -1, index = 0; index != -1; count++, index = string.indexOf(symbol, index + 1));
     }
-}
+};
 
 /**
  * Принимает строку в первом аргументе, и символ во втором
