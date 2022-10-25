@@ -43,10 +43,19 @@ export const truncate = (string, length) => {
  * @returns {number}
  */
 export const quantityOfSymbols = (string, symbol) => {
-    for (let count = -1, index = 0; index != -1; count++, index = string.indexOf(symbol, index + 1)) {
-        return count (string, symbol)
+
+    let symb = "s"
+    let str = "This is a task of quantity of Symbols";
+    function count(str, symb) {
+
+        for (var count = -1, index = 0; index != -1; count++, index = str.indexOf(symb, index + 1));
+
+        return count;
     }
+
+    console.log(count(str, symb))
 };
+
 
 /**
  * Принимает строку в первом аргументе, и символ во втором
@@ -63,4 +72,5 @@ export const quantityOfSymbols = (string, symbol) => {
  * @param {string} symbol
  * @returns {number}
  */
-export const quantityOfSymbolsWithIndexOf = (string, symbol) => {};
+export const quantityOfSymbolsWithIndexOf = (string, symbol) => { };
+
