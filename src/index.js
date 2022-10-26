@@ -28,7 +28,7 @@ export const changeWord = (string, word, newWord) => {
  * @returns {string}
  */
 export const truncate = (string, length) => {
-    return string.slice(0, 3)
+    return string.slice(0, length)
 };
 
 /**
@@ -43,13 +43,13 @@ export const truncate = (string, length) => {
  * @returns {number}
  */
 export const quantityOfSymbols = (string, symbol) => {
-    let symb = 't'
-    let str = 'Test'
-    function count(str, symb) {
-        for (var count = -1, index = 0; index != -1; count++, index = str.indexOf(symb, index + 1));
-        return count;
+    let counter = 0
+
+    for (let i = 0; i < string.length; i++) {
+        if (string[i].toLowerCase() === symbol.toLowerCase()) counter++
     }
-    console.log(count(str, symb))
+
+    return counter
 };
 const cycledSymbols = quantityOfSymbols('Test', 't');
 console.log(cycledSymbols);
@@ -70,19 +70,20 @@ console.log(cycledSymbols);
  * @returns {number}
  */
 export const quantityOfSymbolsWithIndexOf = (string, symbol) => {
-
     let stringNew = string.toLowerCase()
     let position = 0
-    let sum = 0
-    
+    let count = 0
+
     while (true) {
         let newPosition = stringNew.indexOf(symbol, position);
-        if (newPosition === -1) break;
-        position = newPosition + 1;
-        sum += 1
+        if (newPosition !== -1) {
+            position = newPosition + 1;
+            count += 1
+        };
+        if (newPosition == string.length - 1) break
     }
-    return sum
-    }
-    
-    const cycledSymbolsIndexOf = quantityOfSymbolsWithIndexOf('Test', 't'); 
-    console.log(cycledSymbolsIndexOf);
+    return count
+}
+
+const cycledSymbolsIndexOf = quantityOfSymbolsWithIndexOf('Test', 't');
+console.log(cycledSymbolsIndexOf);
