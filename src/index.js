@@ -51,8 +51,7 @@ export const quantityOfSymbols = (string, symbol) => {
 
     return counter
 };
-const cycledSymbols = quantityOfSymbols('Test', 't');
-console.log(cycledSymbols);
+
 
 /**
  * Принимает строку в первом аргументе, и символ во втором
@@ -84,6 +83,3 @@ export const quantityOfSymbolsWithIndexOf = (string, symbol) => {
     }
     return count
 }
-
-const cycledSymbolsIndexOf = quantityOfSymbolsWithIndexOf('Test', 't');
-console.log(cycledSymbolsIndexOf);
