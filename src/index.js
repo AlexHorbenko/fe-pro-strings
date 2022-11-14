@@ -68,18 +68,18 @@ export const quantityOfSymbols = (string, symbol) => {
  * @param {string} symbol
  * @returns {number}
  */
-// export const quantityOfSymbolsWithIndexOf = (string, symbol) => {
-//     let stringNew = string.toLowerCase()
-//     let position = 0
-//     let count = 0
+export const quantityOfSymbolsWithIndexOf = (string, symbol) => {
+    let stringNew = string.toLowerCase()
+    let position = 0
+    let count = 0
 
-//     while (true) {
-//         let newPosition = stringNew.indexOf(symbol, position);
-//         if (newPosition !== -1) {
-//             position = newPosition + 1;
-//             count += 1
-//         };
-//         if (newPosition === string.length - 1) break
-//     }
-//     return count
-// }
+    while (true) {
+        console.log('is in while');
+        let newPosition = stringNew.indexOf(symbol, position);
+        if (newPosition !== -1) {
+            position = newPosition + 1;
+            count += 1
+        } else break
+    }
+    return count
+}
